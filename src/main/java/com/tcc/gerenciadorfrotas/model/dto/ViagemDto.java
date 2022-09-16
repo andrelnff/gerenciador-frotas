@@ -20,6 +20,10 @@ public class ViagemDto {
 	private Usuario usuario;
 	private Veiculo veiculo;
 	
+	public ViagemDto() {
+		
+	}
+	
 	public ViagemDto(Viagem viagem) {
 		
 		this.id = viagem.getId();

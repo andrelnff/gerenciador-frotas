@@ -15,6 +15,10 @@ public class VeiculoDto {
 	private String chassi;
 	private String estadoAtual;
 	
+	public VeiculoDto() {
+		
+	}
+	
 	public VeiculoDto(Veiculo veiculo) {
 		this.id = veiculo.getId();
 		this.marca = veiculo.getMarca();

@@ -13,6 +13,10 @@ public class UsuarioDto {
 	private String email;
 	private String cnh;
 	private String tipoCnh;
+	
+	public UsuarioDto(){
+		
+	}
 
 	public UsuarioDto(Usuario usuario){
 		this.id = usuario.getId();
