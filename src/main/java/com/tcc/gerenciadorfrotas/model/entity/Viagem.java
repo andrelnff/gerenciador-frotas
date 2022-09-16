@@ -18,10 +18,11 @@ public class Viagem {
 	private String horarioSaida;
 	private String horarioChegada;
 	private String odometroSaida;
-	private String odometroChegado;
+	private String odometroChegada;
 	private String destino;
 	private String multa;
 	private String acidente;
+	private Usuario usuario;
+	private Veiculo veiculo;
 	
-
 }
