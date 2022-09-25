@@ -1,6 +1,7 @@
 package com.tcc.gerenciadorfrotas.model.form;
 
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 
 import com.tcc.gerenciadorfrotas.model.entity.Usuario;
 import com.tcc.gerenciadorfrotas.model.entity.Veiculo;
@@ -21,8 +22,10 @@ public class ViagemForm {
 	private String destino;
 	private String multa;
 	private String acidente;
-	@NotBlank(message = "Usuario não pode estar em branco")
+	@NotNull(message = "Usuario não pode ser nulo")
 	private Usuario usuario;
-	@NotBlank(message = "Veiculo não pode estar em branco")
+	@NotNull(message = "Veiculo não pode ser nulo")
 	private Veiculo veiculo;
+
 }
+

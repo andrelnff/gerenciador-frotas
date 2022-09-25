@@ -30,7 +30,7 @@ public class ViagemController {
 	@PostMapping
 	@ResponseStatus(code = HttpStatus.CREATED)
 	public ViagemDto registrarViagem(@RequestBody @Valid ViagemForm viagemForm) {
-		return viagemService.criarViagem(null);
+		return viagemService.criarViagem(viagemForm);
 	}
 
 	@GetMapping

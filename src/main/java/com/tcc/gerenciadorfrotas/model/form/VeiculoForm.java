@@ -1,6 +1,7 @@
 package com.tcc.gerenciadorfrotas.model.form;
 
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 
 import lombok.Data;
 
@@ -10,7 +11,7 @@ public class VeiculoForm {
 	private String marca;
 	@NotBlank(message = "Modelo de saida não pode estar em branco")
 	private String modelo;
-	@NotBlank(message = "Ano de saida não pode estar em branco")
+	@NotNull(message = "Ano de saida não pode ser nulo")
 	private Long ano;
 	@NotBlank(message = "Placa de saida não pode estar em branco")
 	private String placa;

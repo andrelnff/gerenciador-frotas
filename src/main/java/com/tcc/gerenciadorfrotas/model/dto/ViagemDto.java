@@ -8,7 +8,7 @@ import lombok.Data;
 
 @Data
 public class ViagemDto {
-	
+
 	private Long id;
 	private String horarioSaida;
 	private String horarioChegada;
@@ -19,13 +19,13 @@ public class ViagemDto {
 	private String acidente;
 	private Usuario usuario;
 	private Veiculo veiculo;
-	
+
 	public ViagemDto() {
-		
+
 	}
-	
+
 	public ViagemDto(Viagem viagem) {
-		
+
 		this.id = viagem.getId();
 		this.horarioSaida = viagem.getHorarioSaida();
 		this.horarioChegada = viagem.getHorarioChegada();
@@ -34,8 +34,8 @@ public class ViagemDto {
 		this.destino = viagem.getDestino();
 		this.multa = viagem.getMulta();
 		this.acidente = viagem.getAcidente();
-		
-		
+		this.usuario = viagem.getUsuario();
+		this.veiculo = viagem.getVeiculo();
 	}
 
 }

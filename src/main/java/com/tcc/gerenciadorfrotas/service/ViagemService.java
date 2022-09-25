@@ -24,7 +24,7 @@ public class ViagemService {
 		viagem.setHorarioSaida(form.getHorarioSaida());
 		viagem.setHorarioChegada(form.getHorarioChegada());
 		viagem.setOdometroSaida(form.getOdometroSaida());
-		viagem.setHorarioChegada(form.getOdometroChegada());
+		viagem.setOdometroChegada(form.getOdometroChegada());
 		viagem.setDestino(form.getDestino());
 		viagem.setAcidente(form.getAcidente());
 		viagem.setMulta(form.getMulta());
