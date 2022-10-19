@@ -23,4 +23,5 @@ public class Veiculo {
 	private String placa;
 	private String chassi;
 	private String estadoAtual;
+	private Long quilometragem;
 }

@@ -14,6 +14,7 @@ public class VeiculoDto {
 	private String placa;
 	private String chassi;
 	private String estadoAtual;
+	private Long quilometragem;
 	
 	public VeiculoDto() {
 		
@@ -27,6 +28,7 @@ public class VeiculoDto {
 		this.placa = veiculo.getPlaca();
 		this.chassi = veiculo.getChassi();
 		this.estadoAtual = veiculo.getEstadoAtual();
+		this.quilometragem = veiculo.getQuilometragem();
 	}
 
 }

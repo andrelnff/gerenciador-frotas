@@ -1,0 +1,1 @@
+ALTER TABLE veiculo ADD quilometragem long

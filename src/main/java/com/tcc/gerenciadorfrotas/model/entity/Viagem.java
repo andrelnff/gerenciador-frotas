@@ -25,9 +25,9 @@ public class Viagem {
 	@Column(name="horario_chegada")
 	private String horarioChegada;
 	@Column(name="odometro_saida")
-	private String odometroSaida;
+	private Long odometroSaida;
 	@Column(name="odometro_chegada")
-	private String odometroChegada;
+	private Long odometroChegada;
 	private String destino;
 	private String multa;
 	private String acidente;

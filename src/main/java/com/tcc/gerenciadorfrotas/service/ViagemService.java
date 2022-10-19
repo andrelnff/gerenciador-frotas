@@ -12,6 +12,7 @@ import com.tcc.gerenciadorfrotas.exception.ViagemNaoEncontradaException;
 import com.tcc.gerenciadorfrotas.model.dto.ViagemDto;
 import com.tcc.gerenciadorfrotas.model.entity.Viagem;
 import com.tcc.gerenciadorfrotas.model.form.ViagemForm;
+import com.tcc.gerenciadorfrotas.repository.VeiculoRepository;
 import com.tcc.gerenciadorfrotas.repository.ViagemRepository;
 
 @Service
@@ -19,6 +20,12 @@ public class ViagemService {
 
     @Autowired
     ViagemRepository viagemRepository;
+
+    @Autowired
+    VeiculoRepository veiculoRepository;
+
+    @Autowired
+    VeiculoService veiculoService;
 
     public ViagemDto criarViagem(ViagemForm form) {
 
@@ -33,7 +40,10 @@ public class ViagemService {
         viagem.setUsuario(form.getUsuario());
         viagem.setVeiculo(form.getVeiculo());
 
+        veiculoService.atualizaQuilometragemVeiculo(form.getOdometroChegada(), form.getVeiculo().getId());
+
         viagem = viagemRepository.save(viagem);
+
         return toDto(viagem);
 
     }
@@ -62,7 +72,7 @@ public class ViagemService {
             viagem.setHorarioSaida(form.getHorarioSaida());
             viagem.setHorarioChegada(form.getHorarioChegada());
             viagem.setOdometroSaida(form.getOdometroSaida());
-            viagem.setHorarioChegada(form.getOdometroChegada());
+            viagem.setOdometroChegada(form.getOdometroChegada());
             viagem.setDestino(form.getDestino());
             viagem.setAcidente(form.getAcidente());
             viagem.setMulta(form.getMulta());
@@ -89,7 +99,7 @@ public class ViagemService {
         dto.setHorarioSaida(viagem.getHorarioSaida());
         dto.setHorarioChegada(viagem.getHorarioChegada());
         dto.setOdometroSaida(viagem.getOdometroSaida());
-        dto.setHorarioChegada(viagem.getOdometroChegada());
+        dto.setOdometroChegada(viagem.getOdometroChegada());
         dto.setDestino(viagem.getDestino());
         dto.setAcidente(viagem.getAcidente());
         dto.setMulta(viagem.getMulta());

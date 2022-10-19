@@ -12,8 +12,8 @@ public class ViagemDto {
 	private Long id;
 	private String horarioSaida;
 	private String horarioChegada;
-	private String odometroSaida;
-	private String odometroChegada;
+	private Long odometroSaida;
+	private Long odometroChegada;
 	private String destino;
 	private String multa;
 	private String acidente;

@@ -49,6 +49,23 @@ public class VeiculoService {
         }
     }
 
+    public Long quilometragemPorVeiculo(Long id) {
+        try {
+            Long quilometragem = veiculoRepository.buscaQuilometragemVeiculo(id);
+            return quilometragem;
+        } catch (RuntimeException e) {
+            throw new RuntimeException();
+        }
+    }
+
+    public void atualizaQuilometragemVeiculo(Long quilometragem, Long id) {
+        try {
+            veiculoRepository.atualizaQuilometragemVeiculo(quilometragem, id);
+        } catch (RuntimeException e) {
+            throw new RuntimeException();
+        }
+    }
+
     public VeiculoDto atualizarPorId(VeiculoForm form, Long id) {
         Optional<Veiculo> opt = veiculoRepository.findById(id);
         try {
@@ -83,6 +100,7 @@ public class VeiculoService {
         dto.setChassi(veiculo.getChassi());
         dto.setAno(veiculo.getAno());
         dto.setEstadoAtual(veiculo.getEstadoAtual());
+        dto.setQuilometragem(veiculo.getQuilometragem());
         return dto;
     }
 

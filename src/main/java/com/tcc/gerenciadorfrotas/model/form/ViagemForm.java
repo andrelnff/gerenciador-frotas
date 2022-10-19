@@ -14,10 +14,10 @@ public class ViagemForm {
 	private String horarioSaida;
 	@NotBlank(message = "Horario de chegada pode estar em branco")
 	private String horarioChegada;
-	@NotBlank(message = "Odometro de saida não pode estar em branco")
-	private String odometroSaida;
-	@NotBlank(message = "Odometro de chegada não pode estar em branco")
-	private String odometroChegada;
+	@NotNull(message = "Odometro de saida não pode estar em branco")
+	private Long odometroSaida;
+	@NotNull(message = "Odometro de chegada não pode estar em branco")
+	private Long odometroChegada;
 	@NotBlank(message = "Destino não pode estar em branco")
 	private String destino;
 	private String multa;
