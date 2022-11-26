@@ -56,7 +56,6 @@ public class ViagemService {
     public ViagemDto buscarViagemPorId(Long id) {
         try {
             Optional<Viagem> opt = viagemRepository.findById(id);
-
             return toDto(opt.get());
         } catch (NoSuchElementException e) {
             throw new ViagemNaoEncontradaException(id);

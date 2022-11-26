@@ -1,5 +1,6 @@
 package com.tcc.gerenciadorfrotas.repository;
 
+
 import javax.transaction.Transactional;
 
 import org.springframework.data.jpa.repository.JpaRepository;
@@ -14,6 +15,9 @@ public interface VeiculoRepository extends JpaRepository<Veiculo, Long>{
     
     @Query(value = "SELECT v.quilometragem FROM VEICULO V WHERE V.veiculo_id = ?1", nativeQuery = true)
     Long buscaQuilometragemVeiculo(Long id); 
+    
+   // @Query(value = "SELECT * FROM VEICULO V WHERE V.veiculo_id = ?1", nativeQuery = true)
+   // Optional<Veiculo> buscarVeiculoPorId(Long id);
     
     @Modifying
     @Transactional

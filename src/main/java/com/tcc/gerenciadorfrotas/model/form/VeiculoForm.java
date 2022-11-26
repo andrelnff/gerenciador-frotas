@@ -17,9 +17,7 @@ public class VeiculoForm {
 	private String placa;
 	@NotBlank(message = "Chassi de saida não pode estar em branco")
 	private String chassi;
-	@NotBlank(message = "Estado de saida não pode estar em branco")
 	private String estadoAtual;
-	
 	private Long quilometragem;
 
 }
