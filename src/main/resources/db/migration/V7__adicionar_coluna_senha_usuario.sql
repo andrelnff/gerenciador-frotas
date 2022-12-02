@@ -1,0 +1,1 @@
+ALTER TABLE usuario ADD senha varchar(200)
